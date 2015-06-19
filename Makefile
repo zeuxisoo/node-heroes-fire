@@ -23,6 +23,12 @@ dist:
 run: dist
 	@open nwjs.app
 
+icon:
+	@bash scripts/icon.sh
+
+build: dist icon
+	@bash scripts/build.sh
+
 bower-init:
 	@node_modules/bower/bin/bower init
 

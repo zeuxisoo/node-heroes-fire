@@ -1,4 +1,6 @@
 node_modules/
 bower_components/
 dist/
+build/
+scripts/fires.icns
 nwjs.app
