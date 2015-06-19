@@ -8,16 +8,30 @@ app.controller('HomeController', ['app', '$scope', '$q', function(app, $scope, $
         request(app.apiUrl, function(error, response, body) {
             var $ = cheerio.load(body);
             var heroes = [];
+            var free   = [];
+            var other  = [];
 
-            $(".hero.free").each(function(i, hero) {
+            $(".hero").each(function(i, hero) {
                 var image = $(hero).find('.icon-wrap .icon img');
                 var link  = $(hero).find('.link-wrap a');
 
-                heroes.push({
-                    'name' : link.attr('href').split('/').pop(),
-                    'image': app.apiUrl + image.attr('src')
-                });
+                if ($(hero).hasClass('free')) {
+                    free.push({
+                        'name' : link.attr('href').split('/').pop(),
+                        'image': app.apiUrl + image.attr('src')
+                    });
+                }else{
+                    other.push({
+                        'name' : link.attr('href').split('/').pop(),
+                        'image': app.apiUrl + image.attr('src')
+                    });
+                }
             });
+
+            heroes = {
+                'free' : free,
+                'other': other
+            }
 
             deferred.resolve(heroes);
         });

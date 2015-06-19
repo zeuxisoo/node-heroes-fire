@@ -2,10 +2,27 @@
     <li class="active">Home</li>
 </ol>
 
+<p class="lead text-center">Free</p>
+
 <div class="row">
-    <div class="col-xs-3 col-md-3" ng-repeat="hero in heroes">
+    <div class="col-xs-3 col-md-3" ng-repeat="hero in heroes.free">
         <div class="panel panel-default">
             <div class="panel-heading">{{ hero.name }}</div>
+            <div class="panel-body text-center">
+                <a href="#/hero/{{ hero.name }}">
+                    <img ng-src="{{ hero.image }}" alt="Name">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="lead text-center">Other</p>
+
+<div class="row">
+    <div class="col-xs-3 col-md-3" ng-repeat="hero in heroes.other">
+        <div class="panel panel-default">
+            <div class="panel-heading truncate">{{ hero.name }}</div>
             <div class="panel-body text-center">
                 <a href="#/hero/{{ hero.name }}">
                     <img ng-src="{{ hero.image }}" alt="Name">
