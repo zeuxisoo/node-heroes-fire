@@ -6,7 +6,7 @@
   "window": {
     "title": "Fires",
     "icon": "src/assets/img/icon.png",
-    "toolbar": true,
+    "toolbar": false,
     "width": 750,
     "height": 650,
     "position": "mouse",
