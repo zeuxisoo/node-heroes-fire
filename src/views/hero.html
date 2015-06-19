@@ -1,0 +1,31 @@
+<ol class="breadcrumb">
+    <li><a href="#/">Home</a></li>
+    <li class="active">Hero</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading">{{ name }}</div>
+    <div class="panel-body">
+        <div class="media" ng-repeat="guide in guides">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object img-rounded" ng-src="{{ guide.image }}" alt="{{ guide.subject }}" width="92" height="93">
+                </a>
+            </div>
+            <div class="media-body">
+                <a href="#/guide/{{ guide.link }}">
+                    <h4 class="media-heading">{{ guide.subject }}</h4>
+                </a>
+                <p>
+                    <small>{{ guide.update }}</small>
+                </p>
+                <p class="text-muted">
+                    <small>comment: {{ guide.status[0] }}, views: {{ guide.status[1] }}</small>
+                </p>
+            </div>
+            <div class="media-right">
+                <span class="label label-primary">{{ guide.rank }}</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<ol class="breadcrumb">
+    <li class="active">Home</li>
+</ol>
+
+<div class="row">
+    <div class="col-xs-3 col-md-3" ng-repeat="hero in heroes">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{ hero.name }}</div>
+            <div class="panel-body text-center">
+                <a href="#/hero/{{ hero.name }}">
+                    <img ng-src="{{ hero.image }}" alt="Name">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

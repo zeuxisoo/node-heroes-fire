@@ -1,0 +1,27 @@
+<ol class="breadcrumb">
+    <li><a href="#/">Home</a></li>
+    <li><a href="#/hero/{{ guide.name | lowercase }}">{{ guide.name }}</a></li>
+    <li class="active">Guide</li>
+</ol>
+
+<div class="panel panel-default">
+    <div class="panel-heading">{{ guide.header }}</div>
+    <div class="panel-body">
+        <div class="col-xs-3" ng-repeat="skill in guide.skills">
+            <a class="thumbnail">
+                <img ng-src="{{ skill.image }}" width="64" height="64">
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Short Code</div>
+    <div class="panel-body">
+        <div class="btn-group btn-group-justified" role="group">
+            <div class="btn-group" role="group" ng-repeat="point in guide.points">
+                <button type="button" class="btn btn-default">{{ point.no }}</button>
+            </div>
+        </div>
+    </div>
+</div>
