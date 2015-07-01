@@ -11,7 +11,7 @@ app.controller('HomeController', ['app', '$scope', '$q', function(app, $scope, $
             var free   = [];
             var other  = [];
 
-            $(".hero").each(function(i, hero) {
+            $("div.hero").each(function(i, hero) {
                 var image = $(hero).find('.icon-wrap .icon img');
                 var link  = $(hero).find('.link-wrap a');
 
