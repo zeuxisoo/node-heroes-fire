@@ -12,7 +12,7 @@
     <array>
         <dict>
             <key>CFBundleTypeIconFile</key>
-            <string>ggd.icns</string>
+            <string>fires.icns</string>
             <key>CFBundleTypeName</key>
             <string>Fires</string>
             <key>CFBundleTypeRole</key>
@@ -40,7 +40,7 @@
     <key>CFBundleExecutable</key>
     <string>nwjs</string>
     <key>CFBundleIconFile</key>
-    <string>ggd.icns</string>
+    <string>fires.icns</string>
     <key>CFBundleIdentifier</key>
     <string>io.nwjs.nw</string>
     <key>CFBundleInfoDictionaryVersion</key>
